@@ -1,0 +1,31 @@
+{
+  "case_id": "bidirectional_three_state_ring",
+  "category": "exact_reference",
+  "description": "Three-state bidirectional CTMC ring with asymmetric clockwise and counterclockwise rates.",
+  "states": [
+    {"id": 0, "role": "recurrent"},
+    {"id": 1, "role": "recurrent"},
+    {"id": 2, "role": "recurrent"}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 2.0},
+    {"from": 1, "to": 2, "rate": 2.0},
+    {"from": 2, "to": 0, "rate": 2.0},
+    {"from": 1, "to": 0, "rate": 1.0},
+    {"from": 2, "to": 1, "rate": 1.0},
+    {"from": 0, "to": 2, "rate": 1.0}
+  ],
+  "expected_exact_results": {
+    "stationary_probability_state_0": 0.3333333333,
+    "stationary_probability_state_1": 0.3333333333,
+    "stationary_probability_state_2": 0.3333333333,
+    "steady_state_entropy_production": 0.6931471806,
+    "absolute_schnakenberg_cycle_affinity": 2.0794415417
+  },
+  "notes": [
+    "Clockwise rates are 2.0 and counterclockwise rates are 1.0.",
+    "Uniform stationary distribution follows from equal total exit structure.",
+    "Steady-state entropy production equals log(2) for this canonical ring convention.",
+    "Absolute cycle affinity equals 3*log(2)."
+  ]
+}
