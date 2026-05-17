@@ -1,5 +1,5 @@
 {
-  "benchmark_manifest_version": "1.1",
+  "benchmark_manifest_version": "1.2",
   "project": "ATGS Benchmarks",
   "owner": "Yozi Systems Labs",
   "current_exact_reference_cases": [
@@ -9,7 +9,9 @@
     "bidirectional_three_state_ring",
     "unidirectional_three_state_ring"
   ],
-  "current_adversarial_boundary_cases": [],
+  "current_adversarial_boundary_cases": [
+    "disconnected_graph"
+  ],
   "categories": [
     {
       "id": "exact_reference",
@@ -19,7 +21,7 @@
     {
       "id": "adversarial_boundary",
       "path": "cases/adversarial_boundary",
-      "status": "scaffold_only"
+      "status": "initial_case_set_started"
     }
   ]
 }
