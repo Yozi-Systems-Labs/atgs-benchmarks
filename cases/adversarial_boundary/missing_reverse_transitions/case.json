@@ -1,0 +1,27 @@
+{
+  "case_id": "missing_reverse_transitions",
+  "category": "adversarial_boundary",
+  "description": "Directed graph with forward transitions but missing reverse transitions, used to verify refusal of bidirectional entropy and cycle-affinity quantities.",
+  "states": [
+    {"id": 0},
+    {"id": 1},
+    {"id": 2}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 1.0},
+    {"from": 1, "to": 2, "rate": 1.0},
+    {"from": 2, "to": 0, "rate": 1.0}
+  ],
+  "expected_behavior": {
+    "missing_reverse_transitions_detected": true,
+    "bidirectional_entropy_production": "refused",
+    "schnakenberg_cycle_affinity": "refused",
+    "epsilon_regularization": "forbidden",
+    "reason": "reverse transitions are absent for every directed edge"
+  },
+  "notes": [
+    "This case validates strict bidirectionality checks.",
+    "ATGS should refuse to invent reverse rates.",
+    "No epsilon regularization should be applied."
+  ]
+}
