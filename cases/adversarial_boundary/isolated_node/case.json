@@ -1,0 +1,24 @@
+{
+  "case_id": "isolated_node",
+  "category": "adversarial_boundary",
+  "description": "Graph with an isolated node used to verify degenerate or undefined handling for unreachable and non-participating states.",
+  "states": [
+    {"id": 0, "role": "active"},
+    {"id": 1, "role": "active"},
+    {"id": 2, "role": "isolated"}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 1.0}
+  ],
+  "expected_behavior": {
+    "isolated_state_detected": true,
+    "reachability_from_isolated_state": "undefined_or_degenerate",
+    "entropy_contribution_from_isolated_state": "zero_or_refused",
+    "reason": "state has no incoming or outgoing transitions"
+  },
+  "notes": [
+    "This case validates isolated-node detection.",
+    "ATGS should not treat isolated states as meaningful transient pathways.",
+    "Outputs involving the isolated node should be explicitly flagged."
+  ]
+}
