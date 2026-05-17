@@ -1,0 +1,26 @@
+{
+  "case_id": "unidirectional_three_state_ring",
+  "category": "exact_reference",
+  "description": "Three-state unidirectional CTMC ring used to verify refusal of bidirectional entropy and Schnakenberg affinity calculations.",
+  "states": [
+    {"id": 0, "role": "recurrent"},
+    {"id": 1, "role": "recurrent"},
+    {"id": 2, "role": "recurrent"}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 2.0},
+    {"from": 1, "to": 2, "rate": 2.0},
+    {"from": 2, "to": 0, "rate": 2.0}
+  ],
+  "expected_behavior": {
+    "steady_state_distribution": "uniform",
+    "bidirectional_entropy_production": "refused",
+    "schnakenberg_cycle_affinity": "refused",
+    "reason": "reverse transitions are missing"
+  },
+  "notes": [
+    "This case is recurrent but not bidirectional.",
+    "Exact-core entropy production requiring reverse rates should be refused, not regularized with epsilon.",
+    "This case validates typed refusal behavior."
+  ]
+}
