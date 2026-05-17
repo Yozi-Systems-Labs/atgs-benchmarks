@@ -1,0 +1,22 @@
+{
+  "case_id": "two_state_absorbing_ctmc",
+  "category": "exact_reference",
+  "description": "Two-state absorbing continuous-time Markov chain with one transient state and one absorbing state.",
+  "states": [
+    {"id": 0, "role": "transient"},
+    {"id": 1, "role": "absorbing"}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 2.0}
+  ],
+  "expected_exact_results": {
+    "mean_first_passage_time_from_0": 0.5,
+    "variance_first_passage_time_from_0": 0.25,
+    "cv2_from_0": 1.0
+  },
+  "notes": [
+    "For rate q = 2.0, MFPT = 1/q = 0.5.",
+    "Variance = 1/q^2 = 0.25.",
+    "This case validates exact continuous-time first-passage calculations."
+  ]
+}
