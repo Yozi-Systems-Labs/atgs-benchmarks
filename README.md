@@ -6,6 +6,11 @@ Public benchmark suites and reproducibility scaffolds for ATGS.
 
 This repository will contain benchmark definitions, reproducibility scripts, and comparative evaluation scaffolds for ATGS.
 
+## Related Repositories
+
+- `Yozi-Systems-Labs/atgs-foundation`
+- `Yozi-Systems-Labs/atgs-validator`
+
 ## Initial Focus
 
 - small exact-reference CTMC cases
