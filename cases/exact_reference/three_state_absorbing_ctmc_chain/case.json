@@ -1,0 +1,26 @@
+{
+  "case_id": "three_state_absorbing_ctmc_chain",
+  "category": "exact_reference",
+  "description": "Three-state absorbing CTMC chain with two transient states and one absorbing state.",
+  "states": [
+    {"id": 0, "role": "transient"},
+    {"id": 1, "role": "transient"},
+    {"id": 2, "role": "absorbing"}
+  ],
+  "rates": [
+    {"from": 0, "to": 1, "rate": 2.0},
+    {"from": 1, "to": 2, "rate": 4.0}
+  ],
+  "expected_exact_results": {
+    "mean_first_passage_time_from_0": 0.75,
+    "mean_first_passage_time_from_1": 0.25,
+    "variance_first_passage_time_from_0": 0.3125,
+    "variance_first_passage_time_from_1": 0.0625
+  },
+  "notes": [
+    "For sequential exponential waiting times with rates a = 2.0 and b = 4.0, MFPT from state 0 is 1/a + 1/b = 0.75.",
+    "MFPT from state 1 is 1/b = 0.25.",
+    "Variance from state 0 is 1/a^2 + 1/b^2 = 0.3125.",
+    "Variance from state 1 is 1/b^2 = 0.0625."
+  ]
+}
