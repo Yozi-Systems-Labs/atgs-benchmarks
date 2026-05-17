@@ -1,0 +1,32 @@
+{
+  "benchmark_manifest_version": "1.0",
+  "project": "ATGS Benchmarks",
+  "owner": "Yozi Systems Labs",
+  "categories": [
+    {
+      "id": "exact_reference",
+      "path": "cases/exact_reference",
+      "purpose": "Small CTMC or graph-process examples with analytically known behavior.",
+      "case_families": [
+        "two_state_absorbing_ctmc",
+        "three_state_absorbing_ctmc_chain",
+        "reversible_two_state_ctmc",
+        "bidirectional_three_state_ring",
+        "unidirectional_three_state_ring"
+      ]
+    },
+    {
+      "id": "adversarial_boundary",
+      "path": "cases/adversarial_boundary",
+      "purpose": "Cases designed to test refusal, degeneracy, undefined quantities, and numerical instability handling.",
+      "case_families": [
+        "disconnected_graph",
+        "isolated_node",
+        "missing_reverse_transitions",
+        "reducible_generator",
+        "near_singular_transient_block",
+        "unidirectional_entropy_request"
+      ]
+    }
+  ]
+}
